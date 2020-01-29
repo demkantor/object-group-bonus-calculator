@@ -62,6 +62,36 @@ function employeeBonusInfo(employee){
 console.log(employeeBonusInfo("Scout"));
 console.log(employeeWithBonus);
 
+function rating(reviewRating, annualSalary){
+  let bonus = 0;
+  if (reviewRating <= 2){
+    return "no bonus";
+  } else
+    if (reviewRating === 3){
+      bonus === 1.04*annualSalary;
+    }else 
+      if (reviewRating === 4){
+        bonus === 1.06*annualSalary;
+      }else
+        if (reviewRating === 5){
+          bonus === 1.1*annualSalary;
+        }
+        return "bonus is: " + bonus
+  }
+
+  console.log(rating(3, 47000));
+
+  function yearsOfServices(employeeNumber, annualSalary){
+    let adjustedBonus = 1;
+    if (employeeNumber > 999 && employeeNumber < 9999){
+      adjustedBonus === 1.05*annualSalary;
+      return "Adjusted Bonus: " + adjustedBonus;
+    } else {
+      return "no additional bonus"
+    }
+  }
+  
+  console.log(yearsOfServices(6243, 74750));
 
 
 /*
