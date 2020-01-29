@@ -59,7 +59,7 @@ function employeeBonusInfo(employee){
   }
   return employeeWithBonus.push(employeeObject);
 }
-console.log(employeeBonusInfo("Scout"));
+console.log(employeeBonusInfo("employees[i].name"));
 console.log(employeeWithBonus);
 
 let bonus = 0;
@@ -71,13 +71,13 @@ function rating(reviewRating, annualSalary){
     return "no bonus";
   } else
     if (reviewRating === 3){
-      bonus === 1.04*annualSalary;
+      bonus = (1.04*annualSalary);
     }else 
       if (reviewRating === 4){
-        bonus === 1.06*annualSalary;
+        bonus = (1.06*annualSalary);
       }else
         if (reviewRating === 5){
-          bonus === 1.1*annualSalary;
+          bonus = (1.1*annualSalary);
         }
         return "bonus is: " + bonus
   }
@@ -86,7 +86,7 @@ function rating(reviewRating, annualSalary){
 
   function yearsOfServices(employeeNumber, annualSalary){
     if (employeeNumber > 999 && employeeNumber < 9999){
-      adjustedBonus === 1.05*annualSalary;
+      adjustedBonus = 1.05*annualSalary;
       return "Adjusted Bonus: " + adjustedBonus;
     } else {
       return "no additional bonus"
@@ -97,10 +97,11 @@ function rating(reviewRating, annualSalary){
 
   function tooMuchMoney (annualSalary){
     if (annualSalary > 65000){
-      readjustedBonus === .99*adjustedBonus;
+      readjustedBonus = (.99 * adjustedBonus);
     }else{
       return "no bonus adjustment based on salary"
     }
+    return readjustedBonus;
   }
 
 console.log(tooMuchMoney(74750));
