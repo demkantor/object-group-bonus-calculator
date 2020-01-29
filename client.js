@@ -31,6 +31,48 @@ const employees = [
   }
 ];
 
+employees.forEach(loopThroughEmployees);
+function loopThroughEmployees(item, index) {
+  for (let key in item) {
+    console.log(item[key]);
+  }
+}
+loopThroughEmployees(employees);
+
+function findValues(){
+let i, item;
+    for (i = 0; i < employees.length; i++) {
+     for (item in employees[i]) {
+     return (item + ": " + employees[i][item]);
+    }
+  }
+}
+console.log(findValues());
+
+let employeeWithBonus = [];
+function employeeBonusInfo(employee){
+  let employeeObject = {
+    name: employee.name,
+    bonusPercentage: employee.bonusPercentage,
+    totalCompensation: employee.totalCompensation,
+    totalBonus: employee.totalBonus
+  }
+  return employeeWithBonus.push(employeeObject);
+}
+console.log(employeeBonusInfo("Scout"));
+console.log(employeeWithBonus);
+
+
+
+/*
+let keys = Object.keys(employees);
+console.log(keys);
+let values = Object.values(employees);
+console.log(values);
+let entries = Object.entries(employees);
+console.log(entries);
+*/
+
 // YOU SHOULD NOT NEED TO CHANGE ANYTHING ABOVE THIS POINT
 
 // Take small steps! Don't write a for loop and two functions that do all of the calculations right away.
