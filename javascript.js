@@ -39,7 +39,7 @@ for(let i=0; i<employees.length; i++){
   function bonusCalculator(employee){
       //console.log("this is employee", employee);
       let newObject = {
-          name: "",
+          name: employee.name,
           bonusPercentage: 0,
           totalCompensation: 0,
           totalBonus: 0
@@ -71,9 +71,10 @@ for(let i=0; i<employees.length; i++){
       newObject.totalCompensation = Number(employee.annualSalary) + newObject.totalBonus;
 
       console.log(newObject);
+      document.write("here is the adjusted bonuses: " + newObject);
     }
 
-
+    
 
 
 
