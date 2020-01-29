@@ -62,8 +62,11 @@ function employeeBonusInfo(employee){
 console.log(employeeBonusInfo("Scout"));
 console.log(employeeWithBonus);
 
+let bonus = 0;
+let adjustedBonus = 1;
+let readjustedBonus = 1;
+
 function rating(reviewRating, annualSalary){
-  let bonus = 0;
   if (reviewRating <= 2){
     return "no bonus";
   } else
@@ -82,7 +85,6 @@ function rating(reviewRating, annualSalary){
   console.log(rating(3, 47000));
 
   function yearsOfServices(employeeNumber, annualSalary){
-    let adjustedBonus = 1;
     if (employeeNumber > 999 && employeeNumber < 9999){
       adjustedBonus === 1.05*annualSalary;
       return "Adjusted Bonus: " + adjustedBonus;
@@ -93,6 +95,17 @@ function rating(reviewRating, annualSalary){
   
   console.log(yearsOfServices(6243, 74750));
 
+  function tooMuchMoney (annualSalary){
+    if (annualSalary > 65000){
+      readjustedBonus === .99*adjustedBonus;
+    }else{
+      return "no bonus adjustment based on salary"
+    }
+  }
+
+console.log(tooMuchMoney(74750));
+
+//no bonus can be above 13% and none below 0%
 
 /*
 let keys = Object.keys(employees);
@@ -102,14 +115,5 @@ console.log(values);
 let entries = Object.entries(employees);
 console.log(entries);
 */
-
-// YOU SHOULD NOT NEED TO CHANGE ANYTHING ABOVE THIS POINT
-
-// Take small steps! Don't write a for loop and two functions that do all of the calculations right away.
-// This problem is massive! Break the problem down. Use the debugger.
-// What is the fewest lines of code I can write and test to get just a little closer?
-
-// This is not a race. Everyone on your team should understand what is happening.
-// Ask questions when you don't.
 
 console.log( employees );
